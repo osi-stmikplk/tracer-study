@@ -100,10 +100,15 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">User</a>
+                                    <a href="#" class="btn btn-default btn-flat">
+                                        <i class="fa fa-user"></i>
+                                        User</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    <a onclick="return confirm('Yakin untuk logout?');"
+                                       href="/auth/logout" class="btn btn-default btn-flat">
+                                        <i class="fa fa-sign-out"></i>
+                                        Sign out</a>
                                 </div>
                             </li>
                         </ul>
@@ -195,6 +200,7 @@
 
 <!-- jQuery 2.1.4 -->
 <script src="{{ asset('plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
+<script src="{{ asset('plugins/intercooler/intercooler-0.9.0.min.js') }}"></script>
 <!-- Bootstrap 3.3.5 -->
 <script src="{{ asset('plugins/bootstrap/bootstrap.min.js') }}"></script>
 <!-- SlimScroll -->
@@ -203,5 +209,7 @@
 <script src="{{ asset('plugins/fastclick/fastclick.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('lte2.3/js/app.min.js') }}"></script>
+<script src="{{ asset('TSSTMIK.js') }}"></script>
+@yield('late-script')
 </body>
 </html>

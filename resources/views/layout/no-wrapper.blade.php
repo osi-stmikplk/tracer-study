@@ -34,6 +34,7 @@ tampilan layoutnya, semacam halaman login dan register ...
     @yield('content')
 <!-- jQuery 2.1.4 -->
 <script src="{{ asset('plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
+<script src="{{ asset('plugins/intercooler/intercooler-0.9.0.min.js') }}"></script>
 <!-- Bootstrap 3.3.5 -->
 <script src="{{ asset('plugins/bootstrap/bootstrap.min.js') }}"></script>
 <!-- SlimScroll -->
@@ -42,6 +43,7 @@ tampilan layoutnya, semacam halaman login dan register ...
 <script src="{{ asset('plugins/fastclick/fastclick.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('lte2.3/js/app.min.js') }}"></script>
+<script src="{{ asset('TSSTMIK.js') }}"></script>
 @yield('late-script')
 </body>
 </html>
