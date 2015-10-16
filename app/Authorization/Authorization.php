@@ -1,6 +1,7 @@
 <?php
 /**
  * Authorization!
+ * TODO: User can get permission without need to have specific Role!
  * User: toni
  * Date: 16/10/15
  * Time: 21:24
@@ -90,7 +91,7 @@ class Authorization implements AuthorizationRoleInterface, AuthorizationPermissi
         foreach ($rr as $r) {
             $permCurrRole = $r->permissions()->get(['permission.id'])->lists('id')->all();
             // check if permissions to check are in the current role permissions using array intersect
-            // actually if exists then there is element in permToCheck also existed in permCurrRole
+            // actually if exists then there is element(s) in permToCheck also existed in permCurrRole
             $b = array_intersect($permToCheck, $permCurrRole);
             // if exists?
             if(count($b)<=0)

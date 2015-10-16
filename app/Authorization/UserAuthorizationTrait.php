@@ -54,5 +54,26 @@ trait UserAuthorizationTrait
         return $this->roles()->detach($r) > 0;
     }
 
+    /**
+     * Check if user have role as ...
+     * @param string $role role name
+     * @return bool
+     */
+    public function isRoleAs($role)
+    {
+        return $this->roles()->where('role.name','=',$role)->count() > 0;
+    }
+
+    /**
+     * Check if current user have permission
+     * @param $permission
+     * @return bool
+     */
+    public function isAbleTo($permission)
+    {
+        /** @var Authorization $a */
+        $a = app('STMIKPLK\Authorization\AuthorizationInterface');
+        return $a->isUserCan($this, $permission);
+    }
 
 }
