@@ -144,13 +144,13 @@
                 </li>
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-files-o"></i>
+                        <i class="fa fa-industry"></i>
                         <span>Alumni</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="#"><i class="fa fa-circle-o"></i> Rekapan</a></li>
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Data Anda</a></li>
+                        <li><a href="#"><i class="fa fa-eye"></i> Data Anda</a></li>
                     </ul>
                 </li>
                 <li class="treeview">

@@ -47,7 +47,7 @@
             </form>
 
             <a href="#">Saya lupa password saya</a><br>
-            <a href="/auth/register"">Mendaftarkan diri sebagai alumni</a>
+            <a href="/auth/register">Mendaftarkan diri sebagai alumni</a>
 
         </div>
         <!-- /.login-box-body -->
