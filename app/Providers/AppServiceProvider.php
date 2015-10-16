@@ -3,6 +3,7 @@
 namespace STMIKPLK\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use STMIKPLK\Authorization\Authorization;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // register authorization
+        $this->app->singleton('STMIKPLK\Authorization\AuthorizationInterface', function($app) {
+            return new Authorization();
+        });
     }
 }
