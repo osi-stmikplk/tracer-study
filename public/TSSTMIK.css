@@ -1,0 +1,4 @@
+a { cursor: pointer; }
+table tr td.caption {font-weight: bold; width: 20%;text-align: right;}
+li#indic-loader{font-weight: bold;display: none;}
+li#indic-loader a{color: #003cb3;}

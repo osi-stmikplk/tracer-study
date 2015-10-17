@@ -16,21 +16,21 @@
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
                         <input type="text" name="name" class="form-control" placeholder="Nomor Induk Mahasiswa Anda">
                     </div>
-                    <div id="name-error" class="help-block error"></div>
+                    <div id="error-name" class="help-block error"></div>
                 </div>
                 <div class="form-group has-feedback">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                         <input type="text" name="email" class="form-control" placeholder="Email">
                     </div>
-                    <div id="email-error" class="help-block error"></div>
+                    <div id="error-email" class="help-block error"></div>
                 </div>
                 <div class="form-group has-feedback">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-key"></i></span>
                         <input type="password" name="password" class="form-control" placeholder="Password">
                     </div>
-                    <div id="password-error" class="help-block error"></div>
+                    <div id="error-password" class="help-block error"></div>
                 </div>
                 <div class="form-group has-feedback">
                     <div class="input-group">
@@ -38,7 +38,7 @@
                         <input type="password" name="password_confirmation" class="form-control"
                                placeholder="Tulis Ulang Password">
                     </div>
-                    <div id="password_confirmation-error" class="help-block error"></div>
+                    <div id="error-password_confirmation" class="help-block error"></div>
                 </div>
                 <div class="form-group">
                     <div class="row">

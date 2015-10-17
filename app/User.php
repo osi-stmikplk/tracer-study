@@ -38,4 +38,9 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    public function profile()
+    {
+        return $this->hasOne('\STMIKPLK\ProfilAlumni');
+    }
 }

@@ -148,7 +148,7 @@ return [
         /*
          * 3rd party Package
          */
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+//        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
     ],
 

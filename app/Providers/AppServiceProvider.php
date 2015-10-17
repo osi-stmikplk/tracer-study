@@ -29,5 +29,10 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton('STMIKPLK\Authorization\AuthorizationInterface', function($app) {
             return new Authorization();
         });
+        // only load when we'are in local env
+        if($this->app->environment()=='local')
+        {
+            $this->app->register('Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider');
+        }
     }
 }

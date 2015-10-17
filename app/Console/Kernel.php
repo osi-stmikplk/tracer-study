@@ -13,6 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
+        \STMIKPLK\Console\Commands\Generatorku::class,
         \STMIKPLK\Console\Commands\Inspire::class,
     ];
 
