@@ -6,7 +6,7 @@
 @section('content')
 {{--<div class="box">--}}
     {{--<div class="box-body">--}}
-        <div class="nav-tabs-custom" ic-indicator="#formindic">
+        <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
                 <li class="active">
                     <a href="#tab-index" data-toggle="tab"
