@@ -29,5 +29,16 @@ trait IntercoolerTrait
         return $this->intercoolerParams;
     }
 
+    /**
+     * Dapatkan parameter intercooler
+     * @param $param
+     * @param null $default
+     * @return array|string
+     */
+    protected function getIntercoolerValue($param, $default=null)
+    {
+        return \Input::query($param, $default);
+    }
+
 
 }

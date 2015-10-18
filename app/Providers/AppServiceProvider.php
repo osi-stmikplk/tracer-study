@@ -4,6 +4,7 @@ namespace STMIKPLK\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use STMIKPLK\Authorization\Authorization;
+use STMIKPLK\Factories\PostFactory;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -28,6 +29,15 @@ class AppServiceProvider extends ServiceProvider
         // register authorization
         $this->app->singleton('STMIKPLK\Authorization\AuthorizationInterface', function($app) {
             return new Authorization();
+        });
+        // service untuk PostFactory
+        $this->app->singleton('STMIKPLK\Factories\PostFactory', function($app) {
+            return new PostFactory();
+        });
+        // tambah blade
+        // @runX($a=$b)
+        \Blade::directive('runX', function($expression){
+            return "<?php {$expression}; ?>";
         });
         // only load when we'are in local env
         if($this->app->environment()=='local')

@@ -28,4 +28,13 @@ Route::group(['middleware'=>'auth'], function() {
     Route::put('alumni/store', ['as' => 'alumni.store', 'uses' => 'AlumniController@store']);
     Route::get('alumni/edit/{id}', ['as' => 'alumni.edit', 'uses' => 'AlumniController@edit']);
     Route::post('alumni/update/{id}', ['as' => 'alumni.update', 'uses' => 'AlumniController@update']);
+
+    // PENGUMUMAN
+    Route::get('pengumuman', ['as' => 'pengumuman', 'uses' => 'PengumumanController@index']);
+    Route::get('pengumuman/getDaftar/{authorId?}', ['as' => 'pengumuman.getDaftar', 'uses' => 'PengumumanController@getDaftar']);
+    Route::get('pengumuman/create', ['as' => 'pengumuman.create', 'uses' => 'PengumumanController@create']);
+    Route::put('pengumuman/store', ['as' => 'pengumuman.store', 'uses' => 'PengumumanController@store']);
+    Route::get('pengumuman/edit/{id}', ['as' => 'pengumuman.edit', 'uses' => 'PengumumanController@edit']);
+    Route::post('pengumuman/update/{id}', ['as' => 'pengumuman.update', 'uses' => 'PengumumanController@update']);
+    Route::delete('pengumuman/destroy/{id}', ['as' => 'pengumuman.destroy', 'uses' => 'PengumumanController@destroy']);
 });

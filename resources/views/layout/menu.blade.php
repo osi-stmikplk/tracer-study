@@ -27,8 +27,10 @@
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a ic-get-from="{{ route('alumni') }}" ic-target="#content-load" ic-push-url="true"><i class="fa fa-circle-o"></i> Rekapan</a></li>
-                    <li><a ic-get-from="{{ route('alumni.show') }}" ic-target="#content-load" ic-push-url="true"><i class="fa fa-eye"></i> Profile Anda</a></li>
+                    <li><a ic-get-from="{{ route('alumni') }}" ic-target="#content-load" ic-push-url="true">
+                            <i class="fa fa-circle-o"></i> Tabulasi</a></li>
+                    <li><a ic-get-from="{{ route('alumni.show') }}" ic-target="#content-load" ic-push-url="true">
+                            <i class="fa fa-eye"></i> Profile Anda</a></li>
                 </ul>
             </li>
             <li class="treeview">
@@ -38,8 +40,10 @@
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
+                    <li><a ic-get-from="{{ route('pengumuman') }}" ic-target="#content-load" ic-push-url="true">
+                            <i class="fa fa-circle-o"></i> Pengumuman</a></li>
                     <li><a href="#"><i class="fa fa-circle-o"></i> Berita</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Pengumuman</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Lowongan Pekerjaan</a></li>
                 </ul>
             </li>
             <li class="treeview">
