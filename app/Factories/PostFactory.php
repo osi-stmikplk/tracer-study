@@ -15,23 +15,36 @@ class PostFactory extends AbstractFactory
 {
     /**
      * Dapatkan post berdasarkan author
-     * @param $userId
+     * @param int|null $userId bila null maka semuanya
      * @return Collection
      */
-    public function getByAuthor($userId, $type=null)
+    public function getByAuthor($userId=null, $type=null)
     {
-        $p = Post::where('author_id', '=', $userId);
+        $p = new Post();
+        if($userId!==null) $p = $p->where('author_id', '=', $userId);
         if($type!==null) $p = $p->whereOwnerType($type);
         return $p->orderBy('updated_at','desc')->get();
     }
 
-    public function getCountByAuthor($userId, $type=null)
+    /**
+     * Dapatkan jumlah post berdasarkan author
+     * @param null|int $userId bila null maka semua
+     * @param null|string $type bila null maka semua tipe
+     * @return mixed
+     */
+    public function getCountByAuthor($userId=null, $type=null)
     {
-        $p = Post::where('author_id', '=', $userId);
+        $p = new Post();
+        if($userId!==null) $p = $p->where('author_id', '=', $userId);
         if($type!==null) $p = $p->whereOwnerType($type);
         return $p->count();
     }
 
+    /**
+     * Dapatkan post berdasarkan id
+     * @param $id
+     * @return mixed
+     */
     public function getById($id)
     {
         return Post::find($id);

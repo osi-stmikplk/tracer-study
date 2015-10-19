@@ -21,6 +21,7 @@
             <div class="tab-content">
                 <div class="tab-pane active table-responsive" id="tab-index">
                     <h3>Daftar Pengumuman</h3>
+                    @include("pengumuman._index_semua")
                 </div>
                 <div class="tab-pane" id="tab-post-anda">
                     @include("pengumuman._tambah")
