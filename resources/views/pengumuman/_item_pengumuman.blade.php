@@ -18,7 +18,7 @@
                ic-on-success="onEditClick({{$p->id}})">edit</a>
             <a class="btn btn-danger btn-xs"
                ic-delete-from="{{ route('pengumuman.destroy',['id'=>$p->id]) }}"
-               ic-target="closest div.box-widget" ic-confirm="Yakit untuk menghapus data?"
+               ic-target="closest div.box-widget" ic-confirm="Yakin untuk menghapus data?"
                     >delete</a>
         </div>
     </div>

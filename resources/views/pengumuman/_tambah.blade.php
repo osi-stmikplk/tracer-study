@@ -10,8 +10,9 @@
         @endif
         {{-- pada saat request berhasil buat hidden tombol tambah ini --}}
         <a id="btnTambahPeng" class="btn btn-primary pull-right"
-           ic-get-from="{{ route('pengumuman.create') }}"
+           ic-get-from="{{ route('pengumuman.create') }}" ic-indicator="#indic-tambah-peng"
            ic-target="#holder-frmPengumuman" ic-on-success="$('#btnTambahPeng').hide();">
+            <i id="indic-tambah-peng" class="fa fa-spin fa-spinner ic-indicator" style="display: none"></i>
             <i class="fa fa-plus-circle"></i> Tambah Pengumuman
         </a>
         <div id="holder-frmPengumuman" class="col-md-12"></div>
