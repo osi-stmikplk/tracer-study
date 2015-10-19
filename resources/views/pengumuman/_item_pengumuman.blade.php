@@ -7,18 +7,10 @@
             <span class="description">{{ $p->created_at }}</span>
         </div>
     </div>
-    <div id="detail-{{ $p->id }}" class="box-body"
-         ic-confirm="Yakin untuk ini?">
-        <dl class="dl-horizontal">
-            {{--<dt>Judul Pengumuman</dt>--}}
-            {{--<dd>{{ $p->judul }}</dd>--}}
-            <dt>Isi Pengumuman</dt>
-            <dd>{{ $p->isi }}</dd>
-            <dt>Tanggal Tayang</dt>
-            <dd>{{ $p->owner->tgl_tayang }}</dd>
-            <dt>Tanggal Expired</dt>
-            <dd>{{ $p->owner->tgl_expired }}</dd>
-        </dl>
+    <div id="detail-{{ $p->id }}" class="box-body">
+        {{ $p->isi }}
+        <br><br>
+        <span class="text-aqua">Tayang: {{ $p->owner->tgl_tayang }}</span>&nbsp;&nbsp;<span class="text-warning">Expired: {{ $p->owner->tgl_expired }}</span>
         <div class="btn btn-group pull-right">
             <a class="btn btn-info btn-xs"
                ic-get-from="{{ route('pengumuman.edit', ['id'=>$p->id, 'icTargetSuccess'=>"holder-{$p->id}"]) }}"
@@ -26,7 +18,7 @@
                ic-on-success="onEditClick({{$p->id}})">edit</a>
             <a class="btn btn-danger btn-xs"
                ic-delete-from="{{ route('pengumuman.destroy',['id'=>$p->id]) }}"
-               ic-target="closest div.box-widget"
+               ic-target="closest div.box-widget" ic-confirm="Yakit untuk menghapus data?"
                     >delete</a>
         </div>
     </div>
