@@ -14,7 +14,7 @@
                 <div class="form-group has-feedback">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input type="text" name="name" class="form-control" placeholder="Nomor Induk Mahasiswa Anda">
+                        <input type="text" name="name" class="form-control" placeholder="Username">
                     </div>
                     <div id="error-name" class="help-block error"></div>
                 </div>
